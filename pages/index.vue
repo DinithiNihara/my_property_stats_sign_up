@@ -1,48 +1,54 @@
 <template>
   <v-row class="app" justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
-      <h1 class="title">Register</h1>
+      <MainHeading>Register</MainHeading>
       <br />
       <p class="paragraph">
         Let's get you started with the best property optimizing tool!
       </p>
-      <div class="itemsLeft">
-        <h4>First name:</h4>
-        <input type="text" class="inputStyles" />
-      </div>
-      <div class="itemsRight">
-        <h4>Last name:</h4>
-        <input type="text" class="inputStyles" />
-      </div>
-      <br /><br /><br />
+      <v-row>
+        <v-col cols="12" sm="6" md="4">
+          <h4>First name:</h4>
+          <TextInput />
+        </v-col>
+        <v-col cols="12" sm="6" md="4">
+          <h4>Last name:</h4>
+          <TextInput />
+        </v-col>
+      </v-row>
+
       <h4>Email address:</h4>
-      <input type="text" class="textInput inputStyles" />
-      <br /><br />
+      <TextInput />
+
       <h4>Date of birth:</h4>
-      <input type="date" class="textInput inputStyles" />
-      <br /><br />
+      <TextInput />
+
       <h4>Password:</h4>
-      <input type="password" class="textInput inputStyles" />
-      <br /><br />
+      <PasswordInput />
+
       <h4>Confirm password:</h4>
-      <input type="password" class="textInput inputStyles" />
-      <br /><br />
-      <input type="checkbox" />
-      <span>
-        I agree with the
-        <a
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="terms"
-          class="link"
+      <PasswordInput />
+
+      <v-row align="center">
+        <v-col cols="12" sm="1"><CheckboxInput /></v-col>
+        <v-col cols="12" sm="11"
+          ><span>
+            I agree with the
+            <a
+              href="#"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="terms"
+              class="link"
+            >
+              terms and conditions
+            </a>
+          </span></v-col
         >
-          terms and conditions
-        </a>
-      </span>
+      </v-row>
+
+      <PrimaryButton>Register</PrimaryButton>
       <br /><br />
-      <button class="registerBtn">Register</button>
-      <br /><br /><br /><br />
       <p align="center">
         Already have an account?
         <a
@@ -60,7 +66,20 @@
 </template>
 
 <script>
+import PrimaryButton from "../components/buttons/PrimaryButton.vue";
+import TextInput from "../components/inputs/TextInput.vue";
+import PasswordInput from "../components/inputs/PasswordInput.vue";
+import CheckboxInput from "../components/inputs/CheckboxInput.vue";
+import MainHeading from "../components/headings/MainHeading.vue";
+
 export default {
   name: "IndexPage",
+  components: {
+    PrimaryButton,
+    TextInput,
+    PasswordInput,
+    CheckboxInput,
+    MainHeading,
+  },
 };
 </script>
