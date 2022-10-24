@@ -2,31 +2,30 @@
   <v-row class="app" justify="center" align="center">
     <v-col cols="12" sm="8" md="6">
       <MainHeading>Register</MainHeading>
-      <br />
       <p class="paragraph">
         Let's get you started with the best property optimizing tool!
       </p>
       <v-row>
-        <v-col cols="12" sm="6" md="4">
-          <h4>First name:</h4>
+        <v-col cols="12" sm="6">
+          <h4>First name</h4>
           <TextInput />
         </v-col>
-        <v-col cols="12" sm="6" md="4">
-          <h4>Last name:</h4>
+        <v-col cols="12" sm="6">
+          <h4>Last name</h4>
           <TextInput />
         </v-col>
       </v-row>
 
-      <h4>Email address:</h4>
+      <h4>Email address</h4>
       <TextInput />
 
-      <h4>Date of birth:</h4>
-      <TextInput />
+      <h4>Date of birth</h4>
+      <DateInput></DateInput>
 
-      <h4>Password:</h4>
+      <h4>Password</h4>
       <PasswordInput />
 
-      <h4>Confirm password:</h4>
+      <h4>Confirm password</h4>
       <PasswordInput />
 
       <v-row align="center">
@@ -71,6 +70,7 @@ import TextInput from "../components/inputs/TextInput.vue";
 import PasswordInput from "../components/inputs/PasswordInput.vue";
 import CheckboxInput from "../components/inputs/CheckboxInput.vue";
 import MainHeading from "../components/headings/MainHeading.vue";
+import DateInput from "../components/inputs/DateInput.vue";
 
 export default {
   name: "IndexPage",
@@ -80,6 +80,7 @@ export default {
     PasswordInput,
     CheckboxInput,
     MainHeading,
+    DateInput,
   },
 };
 </script>
